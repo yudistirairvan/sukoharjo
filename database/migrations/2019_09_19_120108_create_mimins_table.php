@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAkunsTable extends Migration
+class CreateMiminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreateAkunsTable extends Migration
      */
     public function up()
     {
-        Schema::create('akuns', function (Blueprint $table) {
+        Schema::create('mimins', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('IdUser');
-            $table->string('NamaAkun');
-            $table->string('Folowers');
-            $table->string('Impresi');
+            $table->string('Nama');
+            $table->string('Email');
+            $table->string('Password');
             $table->integer('Ket');
             $table->timestamps();
-            // $table->unsignedBigInteger('IdUser');
-            // $table->foreign('IdUser')->references('id')->on('mimmins');
         });
     }
 
@@ -33,6 +30,6 @@ class CreateAkunsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('akuns');
+        Schema::dropIfExists('mimins');
     }
 }

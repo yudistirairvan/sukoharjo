@@ -24,6 +24,12 @@ class CreateJadwalsTable extends Migration
             $table->integer('Feed');
             $table->integer('Ket');
             $table->timestamps();
+            // $table->unsignedBigInteger('IdUser');
+            // $table->foreign('IdUser')->references('id')->on('mimins');
+            // // $table->unsignedBigInteger('IdAkun');
+            // $table->foreign('IdAkun')->references('id')->on('akuns');
+            // // $table->unsignedBigInteger('IdPembukuan');
+            // $table->foreign('IdPembukuan')->references('id')->on('pembukuans');
         });
     }
 

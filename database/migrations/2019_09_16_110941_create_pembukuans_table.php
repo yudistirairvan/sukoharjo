@@ -28,6 +28,10 @@ class CreatePembukuansTable extends Migration
             $table->string('Tag');
             $table->integer('Ket');
             $table->timestamps();
+            // // $table->unsignedBigInteger('IdUser');
+            // $table->foreign('IdUser')->references('id')->on('mimins');
+            // $table->foreign('IdAkun')->references('id')->on('akuns');
+            // // $table->unsignedBigInteger('IdPembukuan');
         });
     }
 
